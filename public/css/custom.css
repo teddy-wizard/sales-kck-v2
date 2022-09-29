@@ -1,0 +1,46 @@
+/* Addable table */
+
+.table-addable.table {
+    min-height: 70px !important;
+    border: 1px solid #e2e2e2;
+}
+.table-addable.table-earning thead th {
+    padding: 11px 20px !important;
+    font-size: 12px;
+}
+.table-addable.table td, .table-addable.table th {
+    text-align:center;
+}
+
+/* Error Message */
+.error-msg {
+    color: red;
+    display: none;
+}
+
+/* Button size */
+.btn-xs {
+    padding: 0.15rem .25rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+    font-size: 12px !important;
+}
+
+
+@media print {
+    .no-print {
+        display: none;
+    }
+}
+
+@media screen {
+    .no-screen {
+        display:none;
+    }
+}
+
+
+#table_body > div:first-child  {
+    display: none;
+}

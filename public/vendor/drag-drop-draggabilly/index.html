@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Draggabilly Drag'n'drop Library Example</title>
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<style>
+  body { font-family: 'Roboto Condensed'; }
+
+.container {
+  padding: 10px;
+  border: 2px solid #F90;
+  height: 500px;
+  margin: 50px auto;
+   background: repeating-linear-gradient(0deg, rgb(221, 221, 221) 0px, rgb(221, 221, 221) 1px,transparent 1px, transparent 21px),repeating-linear-gradient(90deg, rgb(221, 221, 221) 0px, rgb(221, 221, 221) 1px,transparent 1px, transparent 21px),linear-gradient(90deg, hsl(104,0%,96%),hsl(104,0%,96%));
+}
+h1 { margin-top: 150px; text-align: center; }
+.draggable {
+  width: 140px;
+  height: 140px;
+  background: #F90;
+  border-radius: 10px;
+  margin: 0 10px 10px 0;
+  float: left;
+}
+.draggable.is-pointer-down {
+  background: #09F;
+  z-index: 2; /* above other draggies */
+}
+.draggable.is-dragging { opacity: 0.7; }
+
+</style>
+</head>
+
+<body>
+<div class="container">
+  <div class="draggable"></div>
+  <div class="draggable"></div>
+  <div class="draggable"></div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<script src="dist/draggabilly.pkgd.min.js"></script>
+<script>
+  // external js: draggabilly.pkgd.js
+
+$(document).ready( function() {
+  var $draggables = $('.draggable').draggabilly({
+    // contain to parent element
+    containment: true,
+    grid: [ 20, 20 ]
+  });
+});
+
+</script>
+<script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
+</body>
+</html>
