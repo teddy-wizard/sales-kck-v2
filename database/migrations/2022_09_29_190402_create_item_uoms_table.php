@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRptCategoriesTable extends Migration
+class CreateItemUomsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateRptCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('rpt_categories', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('targetWeight')->nullable();
-            $table->string('targetUOM')->nullable();
+        Schema::table('item_uoms', function (Blueprint $table) {
+            //
         });
     }
 
@@ -28,6 +25,8 @@ class CreateRptCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rpt_categories');
+        Schema::table('item_uoms', function (Blueprint $table) {
+            //
+        });
     }
 }

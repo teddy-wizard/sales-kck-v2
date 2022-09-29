@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRptProductsTable extends Migration
+class CreateItemImagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateRptProductsTable extends Migration
      */
     public function up()
     {
-        Schema::create('rpt_products', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('product');
+        Schema::table('item_images', function (Blueprint $table) {
+            //
         });
     }
 
@@ -24,8 +23,11 @@ class CreateRptProductsTable extends Migration
      *
      * @return void
      */
+    
     public function down()
     {
-        Schema::dropIfExists('rpt_products');
+        Schema::table('item_images', function (Blueprint $table) {
+            //
+        });
     }
 }
