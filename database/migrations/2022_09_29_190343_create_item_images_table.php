@@ -23,6 +23,7 @@ class CreateItemImagesTable extends Migration
      *
      * @return void
      */
+    
     public function down()
     {
         Schema::table('item_images', function (Blueprint $table) {
